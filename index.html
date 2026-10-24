@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMEN GRAND ACADEMY | Zamonaviy 3 Qavatli Innovatsion O'quv Markazi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              white: '#FFFFFF',
+              offwhite: '#F8FAFC',
+              skyLight: '#E0F2FE',
+              sky: '#38BDF8',
+              skyDeep: '#0284C7',
+              goldLight: '#FEF08A',
+              gold: '#D4AF37',
+              goldDark: '#B45309',
+              navy: '#0F172A',
+              navyDeep: '#090D16',
+            }
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            sans: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.45)',
+            'sky-glow': '0 0 35px -5px rgba(56, 189, 248, 0.45)',
+            'premium': '0 20px 40px -15px rgba(15, 23, 42, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Shimmer Effect */
+    @keyframes goldShimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F59E0B 0%, #D4AF37 50%, #FBBF24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .sky-gradient-text {
+      background: linear-gradient(135deg, #0284C7 0%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-gradient {
+      border-image: linear-gradient(to right, #D4AF37, #38BDF8, #D4AF37) 1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased selection:bg-brand-skyLight selection:text-brand-skyDeep transition-colors duration-500">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 text-center border-b border-brand-gold/30 flex items-center justify-center gap-3">
+    <span class="inline-flex items-center gap-1.5 bg-brand-gold/20 text-brand-gold font-semibold px-2.5 py-0.5 rounded-full border border-brand-gold/40 text-xs">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Yangi Avlod Markazi
+    </span>
+    <span class="text-slate-200 hidden sm:inline">"Lumen Grand Academy" — Arxitektura, dizayn va ta'limda mutlaqo yangi standart!</span>
+    <a href="#loyiha-rejasi" class="text-brand-sky hover:text-brand-gold underline font-medium transition-colors">Loyihani ko'rish &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-skyLight to-white border-2 border-brand-gold/50 flex items-center justify-center shadow-md group-hover:shadow-gold-glow transition-all duration-300">
+          <i data-lucide="zap" class="w-6 h-6 text-brand-gold fill-brand-gold"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-heading text-2xl font-black tracking-wider text-slate-900">LUMEN</span>
+            <span class="text-[10px] font-bold tracking-widest text-brand-gold uppercase px-1.5 py-0.5 rounded bg-brand-gold/10 border border-brand-gold/30">Grand</span>
+          </div>
+          <p class="text-[10px] font-semibold tracking-widest text-brand-skyDeep uppercase">Academy of Excellence</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#bino-haqida" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="building-2" class="w-4 h-4 text-brand-sky"></i> Bino
+        </a>
+        <a href="#qavatlar" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="layers" class="w-4 h-4 text-brand-sky"></i> 3 Qavat Rejasi
+        </a>
+        <a href="#kutubxona" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i> Kutubxona
+        </a>
+        <a href="#sinflar" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-brand-sky"></i> Sinflar
+        </a>
+        <a href="#kurslar" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i> Kurslar
+        </a>
+        <a href="#tashqi-hudud" class="hover:text-brand-skyDeep transition-colors flex items-center gap-1.5">
+          <i data-lucide="trees" class="w-4 h-4 text-emerald-500"></i> Bog' & Parkovka
+        </a>
+      </nav>
+
+      <!-- Right Action & Day/Night Toggle -->
+      <div class="flex items-center gap-3">
+        <!-- Interactive Night/Day Toggle -->
+        <button id="lightingToggleBtn" onclick="toggleLightingMode()" class="px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-300 bg-slate-50 hover:bg-slate-100 flex items-center gap-2 text-slate-700 transition-all shadow-sm">
+          <i id="lightingIcon" data-lucide="moon" class="w-4 h-4 text-brand-gold"></i>
+          <span id="lightingLabel">Kechki Yoritish</span>
+        </button>
+
+        <a href="#boglanish" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-sky to-brand-skyDeep text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-sky-glow hover:scale-105 transition-all">
+          <i data-lucide="compass" class="w-4 h-4"></i> Loyihani Ko'rish
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH TWILIGHT ARCHITECTURE RENDER -->
+  <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-white via-sky-50/40 to-[#F8FAFC]" id="bino-haqida">
+    <!-- Background glow shapes -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-skyLight/50 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-brand-goldLight/30 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <!-- Hero Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-gold/40 shadow-sm mb-5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Innovatsion Ta'lim Arxitekturasi</span>
+        </div>
+        
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-4">
+          Bir Ko'rganda O'qigingiz Keladigan <span class="gold-gradient-text">Noodatiy</span> Markaz
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <strong>"LUMEN GRAND ACADEMY"</strong> — Katta panoramik shisha derazali, hashamatli 2 qavatli kutubxonaga ega, tabiat bag'ridagi 3 qavatli zamonaviy ilm maskani. Oq, och ko'k va oltin ranglarning mukammal uyg'unligi.
+        </p>
+
+        <!-- Color Palette Quick Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
+          <span class="inline-flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">
+            <span class="w-4 h-4 rounded-full bg-white border-2 border-slate-300 shadow-inner"></span> Kristall Oq (Soflik va erkinlik)
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-xl border border-sky-200 text-xs font-semibold text-brand-skyDeep shadow-sm">
+            <span class="w-4 h-4 rounded-full bg-brand-sky border-2 border-sky-300"></span> Och Moviy (Chuqur intellekt va tinchlik)
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-xl border border-amber-200 text-xs font-semibold text-amber-700 shadow-sm">
+            <span class="w-4 h-4 rounded-full bg-brand-gold border-2 border-amber-400"></span> Aslzoda Oltin (Oliy nufuz va g'alaba)
+          </span>
+        </div>
+      </div>
+
+      <!-- MAIN 3D ARCHITECTURAL RENDER SHOWCASE (EXTERIOR) -->
+      <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-slate-900/10 group bg-slate-900">
+        
+        <!-- Render Image -->
+        <img id="mainExteriorImg" 
+             src="assets/images/exterior.jpg" 
+             alt="Lumen Grand Academy Binosi - Tashqi Ko'rinish" 
+             class="w-full h-[450px] sm:h-[600px] object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-700 ease-out">
+
+        <!-- Top Badges Overlay -->
+        <div class="absolute top-5 left-5 right-5 flex flex-wrap items-center justify-between gap-3 pointer-events-none">
+          <div class="bg-slate-950/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/20 text-white flex items-center gap-2.5 shadow-lg pointer-events-auto">
+            <i data-lucide="building" class="w-5 h-5 text-brand-gold"></i>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider block text-brand-gold">Bino Arxitekturasi</span>
+              <span class="text-xs text-slate-200 font-medium">3 Qavat • Panoramik Fasad • Kechki Yoritish</span>
+            </div>
+          </div>
+
+          <div class="bg-brand-skyDeep/90 backdrop-blur-md px-4 py-2 rounded-2xl border border-sky-300/30 text-white flex items-center gap-2 shadow-lg pointer-events-auto">
+            <i data-lucide="sun-medium" class="w-4 h-4 text-brand-gold"></i>
+            <span class="text-xs font-bold">Twilight & Architectural Lighting</span>
+          </div>
+        </div>
+
+        <!-- Hotspot Annotations on the Render -->
+        <div class="absolute bottom-6 left-6 right-6 bg-slate-950/85 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/15 text-white flex flex-wrap items-center justify-between gap-4">
+          
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center shrink-0">
+              <i data-lucide="sparkle" class="w-6 h-6 text-brand-gold"></i>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+                "Lumen Grand Academy" — Haqiqiy Bino Ko'rinishi
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Polgacha shisha vitrajlar, oltin nurlanuvchi peshtoq, manzarali daraxtlar, veloturargoh va keng avtomobil parkingi.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <a href="assets/images/exterior.jpg" target="_blank" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white border border-white/20 transition-all flex items-center gap-1.5">
+              <i data-lucide="maximize" class="w-3.5 h-3.5"></i> To'liq Ekran
+            </a>
+            <a href="#qavatlar" class="px-4 py-2 rounded-xl bg-brand-gold hover:bg-amber-400 text-xs font-bold text-slate-900 shadow-md hover:shadow-gold-glow transition-all flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i> Ichki Qavatlarni Ko'rish
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Quick Metrics Counters -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+        
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-premium text-center">
+          <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-sky-50 text-brand-skyDeep flex items-center justify-center">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <span class="font-heading text-3xl font-black text-slate-900 block">3 Qavat</span>
+          <span class="text-xs font-medium text-slate-500">1,800 m² Umumiy Maydon</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-premium text-center">
+          <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <span class="font-heading text-3xl font-black text-slate-900 block">10,000+</span>
+          <span class="text-xs font-medium text-slate-500">Kitobli Grand Kutubxona</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-premium text-center">
+          <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-sky-50 text-brand-skyDeep flex items-center justify-center">
+            <i data-lucide="laptop" class="w-5 h-5"></i>
+          </div>
+          <span class="font-heading text-3xl font-black text-slate-900 block">24 Sinf</span>
+          <span class="text-xs font-medium text-slate-500">Shinam & Smart Jihozlangan</span>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-premium text-center">
+          <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="car" class="w-5 h-5"></i>
+          </div>
+          <span class="font-heading text-3xl font-black text-slate-900 block">30+ / 20+</span>
+          <span class="text-xs font-medium text-slate-500">Avto & Velo To'xtash Joyi</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRAND IDENTITY & LOGO SECTION -->
+  <section class="py-20 bg-white border-y border-slate-200/80" id="brend-va-logo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Logo Display Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-3xl border border-brand-gold/30 shadow-2xl relative overflow-hidden group">
+            <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-brand-gold/10 rounded-full blur-2xl"></div>
+            <div class="absolute top-4 right-4 text-[10px] uppercase font-bold tracking-widest text-brand-gold/70 px-2 py-1 rounded bg-brand-gold/10 border border-brand-gold/20">
+              Asosiy Vektor Logotip
+            </div>
+            
+            <!-- SVG Logo Render -->
+            <div class="py-4 flex justify-center">
+              <img src="assets/images/lumen_logo.svg" alt="Lumen Grand Academy Logo" class="w-full max-w-sm h-auto drop-shadow-md">
+            </div>
+
+            <p class="text-xs text-slate-400 text-center mt-3 border-t border-slate-800 pt-3">
+              * Vektor formatda tayyorlangan — fasad yozuvi, bayroq, kantselyariya va forma uchun mukammal moslashuvchan.
+            </p>
+          </div>
+
+          <!-- Color Swatches Bar -->
+          <div class="bg-[#F8FAFC] p-5 rounded-2xl border border-slate-200">
+            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Markaziy Ranglar Palitrasi:</h4>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-white p-3 rounded-xl border border-slate-200 text-center shadow-sm">
+                <div class="w-full h-8 rounded-lg bg-white border border-slate-300 shadow-inner mb-2"></div>
+                <span class="block text-xs font-bold text-slate-800">#FFFFFF</span>
+                <span class="text-[10px] text-slate-500">Kristall Oq</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-sky-100 text-center shadow-sm">
+                <div class="w-full h-8 rounded-lg bg-[#38BDF8] mb-2"></div>
+                <span class="block text-xs font-bold text-brand-skyDeep">#38BDF8</span>
+                <span class="text-[10px] text-slate-500">Och Moviy</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-amber-100 text-center shadow-sm">
+                <div class="w-full h-8 rounded-lg bg-[#D4AF37] mb-2"></div>
+                <span class="block text-xs font-bold text-amber-700">#D4AF37</span>
+                <span class="text-[10px] text-slate-500">Aslzoda Oltin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Brand Philosophy & Concept -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-brand-gold/30 text-amber-800 text-xs font-bold">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-brand-gold"></i> O'ziga Xos Nufuzli Brend
+          </div>
+
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+            Nega Aynan <span class="gold-gradient-text">"LUMEN GRAND ACADEMY"</span>?
+          </h2>
+
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            O'quv markazining nomi bir marta eshitilganda yodda qolishi, nufuzli yangrashi va har bir talabada katta ishonch uyg'otishi lozim. 
+            <strong>"Lumen"</strong> — lotin tilidan olingan bo'lib, <em>"Nur"</em>, <em>"Yorug'lik"</em> va <em>"Ziyo"</em> ma'nolarini bildiradi.
+          </p>
+
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-sky-50/60 border border-sky-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-sky text-white flex items-center justify-center shrink-0 shadow-sm">
+                <i data-lucide="flame" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Ziyo va Ma'rifat Mash'ali (Logotip Markazida)</h4>
+                <p class="text-xs text-slate-600 mt-1">Oltin mash'al va ochiq kitob uyg'unligi — bilim insonni zulmatdan yorug'likka olib chiquvchi eng buyuk kuch ekanligini ifodalaydi.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-amber-50/60 border border-amber-100">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold text-slate-900 flex items-center justify-center shrink-0 shadow-sm">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Xalqaro Standart va Cheksizlik Orbitasi</h4>
+                <p class="text-xs text-slate-600 mt-1">Logotipdagi moviy halqa — o'quvchilarimiz nafaqat O'zbekistonda, balki xalqaro maydonda (Harvard, Cambridge, Oksford) nufuzli natijalarga erishishiga yo'llanmadir.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="w-10 h-10 rounded-xl bg-slate-900 text-brand-gold flex items-center justify-center shrink-0 shadow-sm">
+                <i data-lucide="quote" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Bosh Shior (Slogan)</h4>
+                <p class="text-sm font-semibold text-brand-skyDeep mt-0.5">"Kelajagingiz nuri — Lumen bilan charog'on!"</p>
+                <p class="text-xs text-slate-500 italic mt-0.5">Xalqaro: "Where Brilliance Begins"</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE 3-STORY FLOOR-BY-FLOOR EXPLORER -->
+  <section class="py-20 bg-slate-50" id="qavatlar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-brand-skyDeep text-xs font-bold mb-3">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Ichki Tuzilma
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+          3 Qavatli Bino Rejasi va Shinam Xonalar
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Har bir qavat o'ziga xos maqsad, akustika va ergonomikaga ega. O'quvchilar qavatlar orasida charchamay, ilhomlanib harakatlanadilar.
+        </p>
+      </div>
+
+      <!-- Floor Selection Tabs -->
+      <div class="flex justify-center mb-10">
+        <div class="bg-white p-1.5 rounded-2xl border border-slate-200 shadow-md flex flex-wrap gap-2 max-w-xl w-full">
+          
+          <button onclick="switchFloor(1)" id="tabBtn1" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all bg-brand-skyDeep text-white shadow-sm">
+            <i data-lucide="door-open" class="w-4 h-4 text-brand-gold"></i>
+            <span>1-QAVAT: Reception & Grand Kutubxona</span>
+          </button>
+
+          <button onclick="switchFloor(2)" id="tabBtn2" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+            <i data-lucide="languages" class="w-4 h-4 text-brand-sky"></i>
+            <span>2-QAVAT: Tillar & Aniq Fanlar</span>
+          </button>
+
+          <button onclick="switchFloor(3)" id="tabBtn3" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+            <i data-lucide="cpu" class="w-4 h-4 text-brand-gold"></i>
+            <span>3-QAVAT: IT, Robotika & Terassa</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Dynamic Floor Content Container -->
+      <div id="floorContent" class="transition-all duration-500">
+        <!-- Default: Floor 1 Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: Floor Blueprint / Diagram Card -->
+          <div class="lg:col-span-5 bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+              <div>
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Arxitektura Sxemasi</span>
+                <h3 class="font-heading text-xl font-bold text-slate-900" id="floorTitle">1-QAVAT: "Welcome & Knowledge Hub"</h3>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-sky-50 text-brand-skyDeep text-xs font-bold" id="floorArea">600 m²</span>
+            </div>
+
+            <!-- Floor Blueprint Representation -->
+            <div class="space-y-3 font-mono text-xs">
+              <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200 flex items-center justify-between">
+                <span class="font-bold text-amber-900 flex items-center gap-2">
+                  <i data-lucide="crown" class="w-4 h-4 text-brand-gold"></i> Grand Reception & Kutish Zali
+                </span>
+                <span class="text-amber-800 font-semibold">120 m²</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between">
+                <span class="font-bold text-sky-950 flex items-center gap-2">
+                  <i data-lucide="book-open" class="w-4 h-4 text-brand-skyDeep"></i> 2 Qavatli Grand Kutubxona & Silent Pods
+                </span>
+                <span class="text-brand-skyDeep font-semibold">280 m²</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between">
+                <span class="font-bold text-emerald-950 flex items-center gap-2">
+                  <i data-lucide="coffee" class="w-4 h-4 text-emerald-600"></i> "Lumen Coffee & Lounge" Bufet
+                </span>
+                <span class="text-emerald-700 font-semibold">70 m²</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+                <span class="font-bold text-slate-800 flex items-center gap-2">
+                  <i data-lucide="user-check" class="w-4 h-4 text-slate-600"></i> Diagnostika & Maslahat Xonalari (3 ta)
+                </span>
+                <span class="text-slate-600 font-semibold">60 m²</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+                <span class="font-bold text-slate-800 flex items-center gap-2">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i> Garderob, Sanitar bloklar & Texnik hudud
+                </span>
+                <span class="text-slate-600 font-semibold">70 m²</span>
+              </div>
+            </div>
+
+            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-3">
+              <i data-lucide="shield-check" class="w-8 h-8 text-brand-gold shrink-0"></i>
+              <p class="text-xs text-slate-300">
+                Kirishda Face-ID va turniket tizimi orqali to'liq xavfsizlik va ota-onalarga avtomatik SMS-xabarnoma integratsiyasi mavjud.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Floor Detailed Highlights -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Highlight 1: Reception -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium hover:border-brand-sky transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-skyDeep flex items-center justify-center shrink-0 border border-sky-100">
+                  <i data-lucide="armchair" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-heading text-lg font-bold text-slate-900">Hashamatli Kutib Olish (Reception & Lounge)</h4>
+                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">5-Yulduzli Shinamlik</span>
+                  </div>
+                  <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Kirishingiz bilan oq Calacatta marmaridan ishlangan, pastki qismi och ko'k LED bilan mayin yoritilgan qabulxona stoli sizni qarshi oladi. Ota-onalar kutishlari uchun yumshoq baxmal kreslolar, doimiy issiq qahva/choy va bolalar uchun qiziqarli kitobli burchaklar mavjud.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Highlight 2: Library -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium hover:border-brand-gold transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 border border-amber-100">
+                  <i data-lucide="book-marked" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-heading text-lg font-bold text-slate-900">2 Qavatli Grand Kutubxona (Sanctuary of Wisdom)</h4>
+                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-brand-skyDeep border border-sky-200">10,000+ Kitob</span>
+                  </div>
+                  <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Shiftgacha yetuvchi oq va issiq eman daraxtidan javonlar, spiral zinalar va polgacha oynali panoramik derazalar. Kutubxonada shovqinsiz "Silent Focus Pods" (shaxsiy chiroqli o'rindiqlar) hamda jamoaviy muhokama orollari joylashtirilgan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Highlight 3: Coffee & Relax -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
+                  <i data-lucide="coffee" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-heading text-lg font-bold text-slate-900">"Lumen Coffee & Lounge" Orolchasi</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                    O'quvchilar dars oralig'ida yangi siqilgan sharbatlar, kapuchino va foydali yeguliklar tanovul qilishlari mumkin bo'lgan yorug' va nafis qahvaxona maydoni.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GRAND LIBRARY & RECEPTION VISUAL SHOWCASE -->
+  <section class="py-20 bg-white" id="kutubxona">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold mb-3 border border-amber-200">
+          <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-gold"></i> Markazning Yuragi
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Oddiy O'quv Markazi Emas — <span class="gold-gradient-text">Ilm Qasri</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Ko'pchilik markazlarda faqat tor sinfxonalar bo'ladi. "Lumen Grand Academy"da esa o'quvchilar darsdan keyin ham soatlab qolib ilm olishni istaydigan hashamatli 2 qavatli kutubxona va qabulxona zali barpo etilgan.
+        </p>
+      </div>
+
+      <!-- Main Library Render -->
+      <div class="rounded-3xl overflow-hidden border-4 border-white shadow-2xl relative group bg-slate-900 mb-12">
+        <img src="assets/images/library_reception.jpg" 
+             alt="Lumen Academy Kutubxonasi va Qabulxonasi" 
+             class="w-full h-[450px] sm:h-[620px] object-cover object-center group-hover:scale-[1.01] transition-transform duration-700">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30 pointer-events-none"></div>
+
+        <!-- Render Highlights Info Overlay -->
+        <div class="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4">
+          <div class="bg-slate-900/90 backdrop-blur-md p-5 rounded-2xl border border-white/20 text-white max-w-xl">
+            <span class="text-[11px] font-bold text-brand-gold uppercase tracking-wider block">Interyer Arxitekturasi</span>
+            <h3 class="font-heading text-xl font-bold text-white mt-1">2 Qavatli Grand Kutubxona va Atrium Qabulxonasi</h3>
+            <p class="text-xs text-slate-300 mt-1">
+              Oq marmar reception, och moviy LED yorug'liklar, baland kitob devorlari va yumshoq ergonomik o'rindiqlar.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="assets/images/library_reception.jpg" target="_blank" class="px-5 py-3 rounded-xl bg-brand-gold text-slate-950 font-bold text-xs shadow-lg hover:shadow-gold-glow transition-all flex items-center gap-2">
+              <i data-lucide="expand" class="w-4 h-4"></i> To'liq Katta O'lchamda Ko'rish
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Pillars of the Grand Library -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-premium transition-all">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-brand-skyDeep flex items-center justify-center mb-4">
+            <i data-lucide="library" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">10,000+ Saralangan Kitob</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Ingliz, rus va o'zbek tillarida eng yangi jahon ensiklopediyalari, Oksford darsliklari, matematika va IT qo'llanmalari.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-premium transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-gold flex items-center justify-center mb-4">
+            <i data-lucide="headphones" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">Shovqinsiz Focus Podlar</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Akustik tovush yutuvchi yumshoq xususiy kabinalar — imtihonga chuqur konsentratsiya bilan tayyorlanish uchun.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-premium transition-all">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-brand-skyDeep flex items-center justify-center mb-4">
+            <i data-lucide="wifi" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">Tezyurar Wi-Fi & Podkast</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Har bir stolda USB-C va 220V portlar, audio-kitoblar va onlayn ma'ruzalarni tinglash uchun planshet stendlari.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-premium transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">Speaking & Kitobxonlar Klubi</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Har shanba kutubxonaning markaziy zinasida o'quvchilar va chet ellik ustozlar ishtirokida adabiy debat va qizg'in bahslar.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLASSROOMS & STUDY ENVIRONMENT (SINFLAR) -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200/80" id="sinflar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Classroom Render -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border-4 border-white shadow-2xl relative group bg-slate-900">
+            <img src="assets/images/classroom.jpg" 
+                 alt="Lumen Academy Shinam Sinfxonasi" 
+                 class="w-full h-[400px] sm:h-[520px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700">
+            
+            <div class="absolute top-4 left-4 bg-slate-900/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span>
+              <span class="text-xs font-bold">Shinam & Ergonomik Sinfxona</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md p-4 rounded-xl border border-white/20 text-white text-xs">
+              <span class="font-bold text-brand-gold">Tafsilot:</span> Tabiiy quyosh nuri tushuvchi polgacha oynalar, orom baxsh etuvchi ko'k va eman stullar, 85 dyuymli 4K Smart doska va akustik yog'och devorlar.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Classroom Advantages -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-brand-skyDeep text-xs font-bold">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Ta'lim Sifati
+          </div>
+
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+            O'quvchi Charchamaydigan <span class="sky-gradient-text">Shinam Muhit</span>
+          </h2>
+
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Biz sinflarni loyihalashda o'quvchining jismoniy va ruhiy qulayligini 1-o'ringa qo'ydik. Hech qanday tor va qorong'u xonalar yo'q — faqat kenglik, toza havo va tabiiy bog' manzarasi!
+          </p>
+
+          <div class="space-y-4">
+            
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 text-brand-skyDeep flex items-center justify-center shrink-0">
+                <i data-lucide="sun" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Panoramik Oynalar va Bog' Manzarasi</h4>
+                <p class="text-xs text-slate-600 mt-1">Dars jarayonida o'quvchining ko'zlari toliqmasligi uchun deraza ortida yam-yashil daraxtlar va gullar ko'rinib turadi.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center shrink-0">
+                <i data-lucide="monitor" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">85 Dyuymli 4K Interaktiv Smart Doskalar</h4>
+                <p class="text-xs text-slate-600 mt-1">Oddiy bo'r yoki marker emas — multimediali video darslar, 3D modellar va interaktiv testlar orqali fanlar o'rgatiladi.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                <i data-lucide="wind" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">HEPA Filtrli Toza Havo Tizimi</h4>
+                <p class="text-xs text-slate-600 mt-1">Xonalarda doimiy 22°C optimal harorat va toza kislorod aylanadi, bu esa o'quvchining miyasini 100% hushyor saqlaydi.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSES SECTION (ASOSIY FANLAR) -->
+  <section class="py-20 bg-white" id="kurslar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold mb-3 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-brand-gold"></i> Talabgir Ta'lim Dasturlari
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Markazda O'qitiladigan Asosiy Kurslar
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Har bir kurs xalqaro standartlar asosida ishlab chiqilgan bo'lib, o'quvchilarni real natija va nufuzli sertifikatlarga olib chiqadi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Course 1: English -->
+        <div class="bg-gradient-to-b from-white to-sky-50/50 rounded-3xl p-6 border-2 border-sky-100 hover:border-brand-sky shadow-premium transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-sky-500 text-white flex items-center justify-center mb-5 shadow-md shadow-sky-500/20 group-hover:scale-110 transition-transform">
+              <i data-lucide="globe-2" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-skyDeep">Xalqaro Til</span>
+            <h3 class="font-heading text-2xl font-bold text-slate-900 mt-1 mb-3">Ingliz Tili (IELTS / CEFR)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              General English, IELTS 8.5+ intensiv dasturlari, har haftalik xorijlik mehmonlar (Native Speakers) bilan Speaking Clublar.
+            </p>
+            <ul class="space-y-2 text-xs font-medium text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Cambridge metodikasi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Mock imtihonlar</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Xalqaro sertifikat kafolati</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-brand-skyDeep">
+            <span>2-Qavat, 6 ta Maxsus Sinf</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Course 2: Russian -->
+        <div class="bg-gradient-to-b from-white to-amber-50/50 rounded-3xl p-6 border-2 border-amber-100 hover:border-brand-gold shadow-premium transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center mb-5 shadow-md shadow-amber-500/20 group-hover:scale-110 transition-transform">
+              <i data-lucide="message-square" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Muloqot va Madaniyat</span>
+            <h3 class="font-heading text-2xl font-bold text-slate-900 mt-1 mb-3">Rus Tili & Nutq San'ati</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Erkin so'zlashuv, to'g'ri talaffuz, grammatika va biznes yozishmalar. To'siqlarsiz muloqotga erishish texnikasi.
+            </p>
+            <ul class="space-y-2 text-xs font-medium text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Jonli dialoglar</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Rus adabiyoti va kino kechalari</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Rasmiy sertifikatlar</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-700">
+            <span>2-Qavat, 4 ta Sinf</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Course 3: Math & Logic -->
+        <div class="bg-gradient-to-b from-white to-sky-50/50 rounded-3xl p-6 border-2 border-sky-100 hover:border-brand-sky shadow-premium transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-skyDeep text-white flex items-center justify-center mb-5 shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform">
+              <i data-lucide="calculator" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-skyDeep">Aniq Fanlar</span>
+            <h3 class="font-heading text-2xl font-bold text-slate-900 mt-1 mb-3">Matematika & Mantiq</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Prezident maktablari, Al-Xorazmiy olimpiadalari, SAT Math va OTMlarga kirish uchun professional darajadagi tayyorgarlik.
+            </p>
+            <ul class="space-y-2 text-xs font-medium text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Olimpiada masalalari</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Mantiqiy fikrlash tezligi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-skyDeep"></i> Maketlar bilan amaliy darslar</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-brand-skyDeep">
+            <span>2-Qavat, 4 ta Laboratoriya</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Course 4: IT & Cyber -->
+        <div class="bg-gradient-to-b from-white to-slate-100 rounded-3xl p-6 border-2 border-slate-200 hover:border-slate-800 shadow-premium transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-slate-900 text-brand-gold flex items-center justify-center mb-5 shadow-md shadow-slate-900/30 group-hover:scale-110 transition-transform">
+              <i data-lucide="code-2" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Kelajak Kasblari</span>
+            <h3 class="font-heading text-2xl font-bold text-slate-900 mt-1 mb-3">IT, Sun'iy Intellekt & Robotika</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Python, Web va Mobile dasturlash, Sun'iy Intellekt (AI) modellarini o'rgatish, 3D modellashtirish va robototexnika.
+            </p>
+            <ul class="space-y-2 text-xs font-medium text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Kuchli workstation kompyuterlar</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Real startap loyihalar</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-gold"></i> Hackathonlar va xalqaro grantlar</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-900">
+            <span>3-Qavat, IT Innovation Hub</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LANDSCAPE, PARKING & NIGHT LIGHTING (TASHQI HUDUD) -->
+  <section class="py-20 bg-slate-900 text-white relative overflow-hidden" id="tashqi-hudud">
+    <!-- Glowing background ornaments -->
+    <div class="absolute -top-40 right-0 w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-gold text-xs font-bold mb-3 border border-brand-gold/30">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Estetika va Qulaylik
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+          Tashqi Hudud: Tabiat, Parkovka va <span class="gold-gradient-text">Kechki Yoritish</span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Markaz nafaqat kunduzi, balki kechki payt ham shahar ko'rkiga aylanadi. Maxsus 3000K arxitekturaviy yorug'liklar bino va bog'ni ertaknamo muhitga kiritadi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Feature 1: Landscape & Trees -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 backdrop-blur-sm hover:border-emerald-500/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-6">
+            <i data-lucide="trees" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Yashil Bog' va Gullar</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Bino old qismida doimiy yashil yapon sarvlari, qalin archalar, manzarali lavanda va mavsumiy atirgulzorlar ekilgan. Tabiiy kislorod va toza havoga boy mikroiqlim yaratilgan.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-emerald-400 font-semibold">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            Avtomatik tomchilatib sug'orish tizimi
+          </div>
+        </div>
+
+        <!-- Feature 2: Night Architectural Lighting -->
+        <div class="bg-white/5 border border-brand-gold/30 rounded-3xl p-7 backdrop-blur-sm hover:shadow-gold-glow transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/20 text-brand-gold border border-brand-gold/30 flex items-center justify-center mb-6">
+            <i data-lucide="lightbulb" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Kechki Oltin Fasad Yoritgichlari</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Binoning fasad bo'ylab 3000K issiq oltin LED chiziqlar, daraxtlar tagida yashiringan projektorlar hamda bino peshtoqidagi nurli "LUMEN GRAND ACADEMY" 3D logotipi.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-brand-gold font-semibold">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            Energiya tejamkor aqlli LED tizimi
+          </div>
+        </div>
+
+        <!-- Feature 3: Parking & Bicycles -->
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 backdrop-blur-sm hover:border-brand-sky/50 transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-brand-sky/20 text-brand-sky border border-brand-sky/30 flex items-center justify-center mb-6">
+            <i data-lucide="bike" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Velo & Avtoturargoh</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            20+ ta velosiped va elektr samokatlar uchun xavfsiz soyabonli zaryadlash stansiyasi hamda ota-onalar va ustozlar uchun 30+ o'rinli avtomatik shlagbaumli parking.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-brand-sky font-semibold">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            24/7 HD videokuzatuv va xavfsizlik
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY STUDENTS FALL IN LOVE WITH LUMEN ACADEMY (WOW FACTOR) -->
+  <section class="py-20 bg-gradient-to-b from-white via-sky-50/30 to-white" id="wow-faktorlar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-brand-skyDeep text-xs font-bold mb-3">
+          <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-500 fill-rose-500"></i> O'quvchi Psixologiyasi
+        </div>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Nega O'quvchilar Bu Markazda O'qishni Orzu Qilishadi?
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Biz an'anaviy zerikarli darsxonalardan voz kechdik. Har bir tafsilot o'quvchida o'qishga bo'lgan cheksiz ishtiyoqni uyg'otish uchun maxsus yaratilgan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-brand-gold flex items-center justify-center shrink-0 border border-amber-200">
+            <i data-lucide="camera" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">"Instagrammable" Go'zallik</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              Oyna devorlar, spiral kutubxona zinasi va zamonaviy neon yozuvlar — o'quvchilar suratga tushib, do'stlari bilan faxrlanib bo'lishadi.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-skyDeep flex items-center justify-center shrink-0 border border-sky-200">
+            <i data-lucide="coins" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Lumen Gamifikatsiyasi (Lumen Coins)</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              Darsdagi faollik va kitob o'qish uchun raqamli tangalar to'plab, markaz do'konidan xudi, noutbuk sumkasi va kitoblar yutib olish mumkin.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Bosimsiz va Shinam Muhit</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              Qattiqqo'llik va zerikarli ma'ruzalar o'rniga — erkin fikrlash, qo'llab-quvvatlovchi mentorlar va samimiy do'stona muhit.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-200">
+            <i data-lucide="film" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Juma Oqshomi: Movie & Debate Night</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              Har juma markaz amfiteatrida xalqaro ilmiy filmlar namoyishi, popkorn va ingliz tilidagi bahs-munozara kechalari o'tkaziladi.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 border border-rose-200">
+            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Ota-onalar Uchun Xotirjamlik</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              O'quvchi markazga kirgani va chiqqani haqida Face-ID orqali ota-onaga Telegram orqali xabar boradi. To'liq xavfsiz hudud.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-premium flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 border border-indigo-200">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Xalqaro Grantlar Dasturi</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+              Eng iqtidorli o'quvchilarga chet el universitetlariga 100% grant yutish bo'yicha shaxsiy mentorlik xizmati beriladi.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT / ACTION -->
+  <section class="py-20 bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy text-white relative overflow-hidden" id="boglanish">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center shadow-gold-glow">
+        <i data-lucide="building-2" class="w-8 h-8 text-brand-gold"></i>
+      </div>
+
+      <h2 class="font-heading text-3xl sm:text-5xl font-black mb-4">
+        Orzuingizdagi O'quv Markazini Hayotga Tatbiq Eting!
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+        Ushbu konsepsiya to'liq bino rejasi, ranglar kodi, fotorealistik renderlar, mebellar joylashuvi va brending hujjati bilan birgalikda tayyorlandi.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="LOYIHA_KONSEPSIYASI.md" class="px-6 py-3.5 rounded-2xl bg-brand-gold hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-xl hover:shadow-gold-glow transition-all flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4"></i> To'liq Loyiha Hujjatini Ko'rish (Markdown)
+        </a>
+        <button onclick="window.print()" class="px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all flex items-center gap-2">
+          <i data-lucide="printer" class="w-4 h-4"></i> Taqdimotni Chop Qilish / PDF
+        </button>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/10 text-xs text-slate-400 flex flex-wrap justify-between items-center gap-4">
+        <span>© 2026 <strong>LUMEN GRAND ACADEMY</strong>. Barcha arxitektura va dizayn huquqlari himoyalangan.</span>
+        <div class="flex items-center gap-4">
+          <span class="text-brand-sky font-semibold">Oq • Och Moviy • Oltin Rang</span>
+          <span>3 Qavatli Bino Standarti</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Floor Switching Data
+    const floorData = {
+      1: {
+        title: "1-QAVAT: \"Welcome & Grand Knowledge Hub\"",
+        area: "600 m²",
+        blueprint: [
+          { name: "Grand Reception & Kutish Zali", size: "120 m²", color: "amber", icon: "crown" },
+          { name: "2 Qavatli Grand Kutubxona & Silent Pods", size: "280 m²", color: "sky", icon: "book-open" },
+          { name: "\"Lumen Coffee & Lounge\" Bufet", size: "70 m²", color: "emerald", icon: "coffee" },
+          { name: "Diagnostika & Maslahat Xonalari (3 ta)", size: "60 m²", color: "slate", icon: "user-check" },
+          { name: "Garderob, Sanitar bloklar & Texnik hudud", size: "70 m²", color: "slate", icon: "sparkles" }
+        ],
+        highlights: [
+          {
+            title: "Hashamatli Kutib Olish (Reception & Lounge)",
+            badge: "5-Yulduzli Shinamlik",
+            badgeColor: "amber",
+            desc: "Kirishingiz bilan oq Calacatta marmaridan ishlangan, pastki qismi och ko'k LED bilan mayin yoritilgan qabulxona stoli sizni qarshi oladi. Ota-onalar kutishlari uchun yumshoq baxmal kreslolar, doimiy issiq qahva/choy va bolalar uchun qiziqarli kitobli burchaklar mavjud.",
+            icon: "armchair"
+          },
+          {
+            title: "2 Qavatli Grand Kutubxona (Sanctuary of Wisdom)",
+            badge: "10,000+ Kitob",
+            badgeColor: "sky",
+            desc: "Shiftgacha yetuvchi oq va issiq eman daraxtidan javonlar, spiral zinalar va polgacha oynali panoramik derazalar. Kutubxonada shovqinsiz \"Silent Focus Pods\" (shaxsiy chiroqli o'rindiqlar) hamda jamoaviy muhokama orollari joylashtirilgan.",
+            icon: "book-marked"
+          },
+          {
+            title: "\"Lumen Coffee & Lounge\" Orolchasi",
+            badge: "Shinamlik",
+            badgeColor: "emerald",
+            desc: "O'quvchilar dars oralig'ida yangi siqilgan sharbatlar, kapuchino va foydali yeguliklar tanovul qilishlari mumkin bo'lgan yorug' va nafis qahvaxona maydoni.",
+            icon: "coffee"
+          }
+        ]
+      },
+      2: {
+        title: "2-QAVAT: \"Language & Exact Sciences Floor\"",
+        area: "600 m²",
+        blueprint: [
+          { name: "Ingliz Tili Sinfxonalari (IELTS/CEFR - 6 ta)", size: "240 m²", color: "sky", icon: "globe-2" },
+          { name: "Rus Tili & Muloqot Sinfxonalari (4 ta)", size: "160 m²", color: "amber", icon: "message-square" },
+          { name: "Matematika & Mantiq Laboratoriyalari (4 ta)", size: "120 m²", color: "sky", icon: "calculator" },
+          { name: "Ustozlar Xonasi (Teachers' Lounge) & Podlar", size: "45 m²", color: "slate", icon: "coffee" },
+          { name: "Tanaffus Lounge & Sanitar bloklar", size: "35 m²", color: "slate", icon: "smile" }
+        ],
+        highlights: [
+          {
+            title: "Ingliz Tili (Oxford & Cambridge Audio-Sinflari)",
+            badge: "6 ta Sinfxona",
+            badgeColor: "sky",
+            desc: "Listening darslari uchun yuqori akustik panellar, aylanuvchi modulli stollar (Speaking Club rejimiga tez o'tadi), 85 dyuymli 4K Smart doskalar va doimiy toza havoni ta'minlovchi iqlim nazorati.",
+            icon: "globe-2"
+          },
+          {
+            title: "Matematika & Mantiq Interaktiv Laboratoriyalari",
+            badge: "4 ta Laboratoriya",
+            badgeColor: "amber",
+            desc: "Geometrik vizual maketlar, formula doskalari, olimpiada masalalarini jamoaviy yechish uchun mo'ljallangan doskali devorlar va qulay orqa tayanchli ergonomik stullar.",
+            icon: "calculator"
+          },
+          {
+            title: "O'quvchilar Dam Olish Orolchalari (Lounge Pockets)",
+            badge: "Tanaffus Maydoni",
+            badgeColor: "emerald",
+            desc: "Katta panoramik derazalar ostida o'quvchilar tanaffusda kitob o'qib, o'zaro fikr almashadigan yumshoq pufiklar va shinam gilamchali burchaklar.",
+            icon: "armchair"
+          }
+        ]
+      },
+      3: {
+        title: "3-QAVAT: \"IT, Innovation & Future Tech Hub\"",
+        area: "600 m²",
+        blueprint: [
+          { name: "IT & Dasturlash Laboratoriyalari (Workstations - 3 ta)", size: "200 m²", color: "slate", icon: "laptop" },
+          { name: "Robototexnika & STEM MakerSpace", size: "110 m²", color: "amber", icon: "cpu" },
+          { name: "Brainstorming & Pitching Amfiteatri", size: "130 m²", color: "sky", icon: "presentation" },
+          { name: "Ochiq Yashil Tom Terassasi (Open Sky Terrace)", size: "110 m²", color: "emerald", icon: "trees" },
+          { name: "Server xonasi, Texnik va Sanitar zonalar", size: "50 m²", color: "slate", icon: "server" }
+        ],
+        highlights: [
+          {
+            title: "Yuqori Texnologiyali IT Laboratoriyalari",
+            badge: "Workstations & Dual-Monitor",
+            badgeColor: "slate",
+            desc: "Python, Web dasturlash, Data Science va Sun'iy Intellekt kurslari uchun kuchli grafika va dual-monitorli kompyuterlar, dasturchilar uchun ergonomik bel himoyali kreslolar.",
+            icon: "laptop"
+          },
+          {
+            title: "Robototexnika & STEM MakerSpace",
+            badge: "Ixtirochilik Zali",
+            badgeColor: "amber",
+            desc: "3D printerlar, Arduino va mikrokontroller stendlari, dron platformalari va robot musobaqa maydonchasi — bolalarda muhandislik tafakkurini rivojlantiradi.",
+            icon: "cpu"
+          },
+          {
+            title: "Ochiq Yashil Osmon Terassasi (Sky Garden Terrace)",
+            badge: "Ochiq Havo",
+            badgeColor: "emerald",
+            desc: "3-qavatdan to'g'ridan-to'g'ri chiqiladigan manzarali ochiq tom-terassa. Darslardan so'ng o'quvchilar toza havoda qahva ichib, quyosh botishini tomosha qilib dam olishlari uchun mo'ljallangan.",
+            icon: "trees"
+          }
+        ]
+      }
+    };
+
+    function switchFloor(floorNum) {
+      // Update Buttons styling
+      [1, 2, 3].forEach(n => {
+        const btn = document.getElementById(`tabBtn${n}`);
+        if (n === floorNum) {
+          btn.className = "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all bg-brand-skyDeep text-white shadow-sm";
+        } else {
+          btn.className = "flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50";
+        }
+      });
+
+      const data = floorData[floorNum];
+      const container = document.getElementById('floorContent');
+      
+      // Build blueprint HTML
+      const blueprintHtml = data.blueprint.map(item => {
+        let bg = 'bg-slate-100 border-slate-200 text-slate-800';
+        let textClr = 'text-slate-600';
+        if (item.color === 'amber') {
+          bg = 'bg-amber-50/80 border-amber-200 text-amber-900';
+          textClr = 'text-amber-800';
+        } else if (item.color === 'sky') {
+          bg = 'bg-sky-50/80 border-sky-200 text-sky-950';
+          textClr = 'text-brand-skyDeep';
+        } else if (item.color === 'emerald') {
+          bg = 'bg-emerald-50/80 border-emerald-200 text-emerald-950';
+          textClr = 'text-emerald-700';
+        } else if (item.color === 'slate') {
+          bg = 'bg-slate-100 border-slate-200 text-slate-900';
+          textClr = 'text-slate-700';
+        }
+
+        return `
+          <div class="p-3.5 rounded-xl ${bg} border flex items-center justify-between">
+            <span class="font-bold flex items-center gap-2">
+              <i data-lucide="${item.icon}" class="w-4 h-4"></i> ${item.name}
+            </span>
+            <span class="${textClr} font-semibold">${item.size}</span>
+          </div>
+        `;
+      }).join('');
+
+      // Build Highlights HTML
+      const highlightsHtml = data.highlights.map(hl => {
+        let badgeStyle = hl.badgeColor === 'amber' ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                         hl.badgeColor === 'sky' ? 'bg-sky-50 text-brand-skyDeep border-sky-200' :
+                         hl.badgeColor === 'emerald' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                         'bg-slate-100 text-slate-700 border-slate-200';
+        return `
+          <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-skyDeep flex items-center justify-center shrink-0 border border-sky-100">
+                <i data-lucide="${hl.icon}" class="w-6 h-6"></i>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-heading text-lg font-bold text-slate-900">${hl.title}</h4>
+                  <span class="text-[11px] font-bold px-2 py-0.5 rounded-full ${badgeStyle} border">${hl.badge}</span>
+                </div>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">${hl.desc}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 bg-white rounded-3xl p-6 border border-slate-200/80 shadow-premium">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+              <div>
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Arxitektura Sxemasi</span>
+                <h3 class="font-heading text-xl font-bold text-slate-900">${data.title}</h3>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-sky-50 text-brand-skyDeep text-xs font-bold">${data.area}</span>
+            </div>
+            <div class="space-y-3 font-mono text-xs">
+              ${blueprintHtml}
+            </div>
+            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-3">
+              <i data-lucide="shield-check" class="w-8 h-8 text-brand-gold shrink-0"></i>
+              <p class="text-xs text-slate-300">
+                Barcha xonalarda polgacha panoramik derazalar va mustaqil shovqin to'suvchi akustik panellar o'rnatilgan.
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-6">
+            ${highlightsHtml}
+          </div>
+        </div>
+      `;
+
+      lucide.createIcons();
+    }
+
+    // Interactive Night/Day Mode Toggle for Lighting Demonstration
+    let isNightMode = false;
+    function toggleLightingMode() {
+      isNightMode = !isNightMode;
+      const body = document.body;
+      const label = document.getElementById('lightingLabel');
+      const icon = document.getElementById('lightingIcon');
+
+      if (isNightMode) {
+        body.classList.add('bg-slate-950', 'text-slate-100');
+        body.classList.remove('bg-[#F8FAFC]', 'text-slate-800');
+        label.innerText = "Kunduzgi Rejim";
+        icon.setAttribute('data-lucide', 'sun');
+      } else {
+        body.classList.remove('bg-slate-950', 'text-slate-100');
+        body.classList.add('bg-[#F8FAFC]', 'text-slate-800');
+        label.innerText = "Kechki Yoritish";
+        icon.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
